@@ -1,0 +1,20 @@
+{
+  "name": "event-table",
+  "description": "",
+  "main": "",
+  "authors": [
+    "santtone <anttonen.sami@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/santtone/event-table",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#1.0.0"
+  }
+}
