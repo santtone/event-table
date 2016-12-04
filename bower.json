@@ -1,12 +1,12 @@
 {
-  "name": "event-table",
+  "name": "event-wheel",
   "description": "",
   "main": "",
   "authors": [
     "santtone <anttonen.sami@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/santtone/event-table",
+  "homepage": "https://github.com/santtone/event-wheel",
   "ignore": [
     "**/.*",
     "node_modules",

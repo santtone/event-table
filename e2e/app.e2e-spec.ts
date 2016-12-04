@@ -1,6 +1,6 @@
 import { EventTablePage } from './app.po';
 
-describe('event-table App', function() {
+describe('event-wheel App', function() {
   let page: EventTablePage;
 
   beforeEach(() => {
