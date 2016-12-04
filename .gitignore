@@ -34,3 +34,4 @@ testem.log
 .DS_Store
 Thumbs.db
 /src/assets/bower_components
+/*.iml
