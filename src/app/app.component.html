@@ -1,9 +1,1 @@
-<!--<paper-drawer-panel>
-  <div drawer> Drawer panel... </div>
-  <div main> Main panel... </div>
-</paper-drawer-panel>-->
-<div *ngFor='let month of months; let i = index'>
-  <svg class="wheel-item" [style.transform]="'rotate(' + i*30 + 'deg)'" [style.fill]="month.color">
-    <path d="M115,115 L115,5 A110,110 1 0,1 190,35 z"></path>
-  </svg>
-</div>
+<ew-event-wheel></ew-event-wheel>

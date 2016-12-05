@@ -4,12 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 
-import { AppComponent } from './app.component';
+import { App } from './app.component';
+import {SafeStylePipe} from './safe-style.pipe'
+import {EventWheel} from './event-wheel/event-wheel.component'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PolymerElement('paper-drawer-panel')
+    App,
+    PolymerElement('paper-drawer-panel'),
+    SafeStylePipe,
+    EventWheel
   ],
   imports: [
     BrowserModule,
@@ -17,6 +21,6 @@ import { AppComponent } from './app.component';
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [App]
 })
 export class AppModule { }
