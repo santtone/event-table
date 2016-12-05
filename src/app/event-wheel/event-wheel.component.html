@@ -1,4 +1,4 @@
-<div style="margin-top: 100px" class="fullbleed vertical layout">
+<div class="wheel-container">
   <div class='wheel'>
     <div class='wheel-item' *ngFor="let month of months; let i = index"
          [style.transform]="'rotate(' + i*30 + 'deg)' + 'skew(-60deg)' | SafeStylePipe"
@@ -7,7 +7,7 @@
         <div class="wheel-item-title">{{month.name}}</div>
       </div>
     </div>
-    <div>
+    <div class="wheel-center">
     </div>
   </div>
 </div>

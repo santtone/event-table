@@ -11,8 +11,10 @@
 .wheel-item {
   overflow: hidden;
   position: absolute;
-  top: 0; right: 0;
-  width: 50%; height: 50%;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
   transform-origin: 0% 100%;
   transform: rotate(0deg) skew(0deg);
   border: 2px solid white;
@@ -21,7 +23,8 @@
 .wheel-item-content {
   position: absolute;
   left: -100%;
-  width: 200%; height: 200%;
+  width: 200%;
+  height: 200%;
   border-radius: 50%;
   background: lightblue;
 }
@@ -34,12 +37,32 @@
   background: white;
 }
 
-.wheel-item-title{
+.wheel-item-title {
   transform: rotate(-40deg);
   position: fixed;
   margin: 100px;
   width: 60px;
   text-align: center
+}
+
+.wheel-center {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 50%;
+  top: 150px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wheel-container {
+  margin-top: 100px;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  position: fixed;
 }
 
 
