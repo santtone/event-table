@@ -1,4 +1,4 @@
-import {Component, AfterViewInit} from '@angular/core';
+import {Component, AfterViewInit, OnInit} from '@angular/core';
 
 @Component({
   selector: 'ew-event-wheel',
@@ -6,7 +6,7 @@ import {Component, AfterViewInit} from '@angular/core';
   styleUrls: ['./event-wheel.component.css']
 })
 
-export class EventWheel implements AfterViewInit {
+export class EventWheel implements OnInit, AfterViewInit {
 
   months = [
     {id: '1', name: 'January', color: 'rgba(0,0,0,0)'},
@@ -23,8 +23,19 @@ export class EventWheel implements AfterViewInit {
     {id: '12', name: 'December', color: 'rgba(0,0,0,1)'}
   ];
 
+  wheelRotation = 0;
+
+  private calculateRotation(): void {
+    const d = new Date();
+    this.wheelRotation = d.getMonth() * 30 + 60;
+  }
+
   selected(index) {
     console.log('Selected: ' + index);
+  }
+
+  ngOnInit() {
+    this.calculateRotation();
   }
 
   ngAfterViewInit(): void {
