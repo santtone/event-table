@@ -33,3 +33,13 @@
 .wheel-item:hover .wheel-item-content {
   background: white;
 }
+
+.wheel-item-title{
+  transform: rotate(-40deg);
+  position: fixed;
+  margin: 100px;
+  width: 60px;
+  text-align: center
+}
+
+

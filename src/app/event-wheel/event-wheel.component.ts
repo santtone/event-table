@@ -23,8 +23,8 @@ export class EventWheel implements AfterViewInit {
     {id: '12', name: 'December', color: 'rgba(0,0,0,1)'}
   ];
 
-  clicked(index){
-    console.log('asdasd: ' + index);
+  selected(index) {
+    console.log('Selected: ' + index);
   }
 
   ngAfterViewInit(): void {

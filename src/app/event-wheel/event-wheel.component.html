@@ -1,7 +1,13 @@
-<div class='wheel'>
-  <div class='wheel-item' *ngFor="let month of months; let i = index"
-      [style.transform]="'rotate(' + i*30 + 'deg)' + 'skew(-60deg)' | SafeStylePipe"
-      (click)="clicked(i)">
-    <div class='wheel-item-content' [style.transform]="'skew(60deg)'"></div>
+<div style="margin-top: 100px" class="fullbleed vertical layout">
+  <div class='wheel'>
+    <div class='wheel-item' *ngFor="let month of months; let i = index"
+         [style.transform]="'rotate(' + i*30 + 'deg)' + 'skew(-60deg)' | SafeStylePipe"
+         (click)="selected(month.name)">
+      <div class='wheel-item-content' [style.transform]="'skew(60deg) ' + 'rotate(' + 115 + 'deg)' | SafeStylePipe">
+        <div class="wheel-item-title">{{month.name}}</div>
+      </div>
+    </div>
+    <div>
+    </div>
   </div>
 </div>
