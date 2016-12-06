@@ -27,7 +27,9 @@ export class EventWheel implements OnInit, AfterViewInit {
 
   private calculateRotation(): void {
     const d = new Date();
-    this.wheelRotation = d.getMonth() * 30 + 60;
+    const days = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
+    console.log(days);
+    this.wheelRotation = (d.getMonth() * 30 + 60) - (360 / days);
   }
 
   selected(index) {
