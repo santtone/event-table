@@ -1,0 +1,9 @@
+<svg style="width: 100%; height: 100%">
+  <defs>
+    <path id="textPath" [attr.d]="pathD"/>
+  </defs>
+  <use x="0" y="0" xlink:href="#textPath" fill="none" stroke="lightblue" stroke-width="40"/>
+  <text fill="black" text-anchor="middle">
+    <textPath startOffset="50%" xlink:href="#textPath">Event...</textPath>
+  </text>
+</svg>
