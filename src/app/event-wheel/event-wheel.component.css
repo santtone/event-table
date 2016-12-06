@@ -1,11 +1,9 @@
 .wheel {
   position: relative;
-  margin: 1em auto;
-  padding: 0;
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  list-style: none;
+  overflow: hidden;
 }
 
 .wheel-item {
@@ -56,13 +54,8 @@
 }
 
 .wheel-container {
-  margin-top: 100px;
   height: 100%;
   width: 100%;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  position: fixed;
 }
 
 

@@ -12,6 +12,7 @@ import {EventWheel} from './event-wheel/event-wheel.component'
   declarations: [
     App,
     PolymerElement('paper-drawer-panel'),
+    PolymerElement('paper-input'),
     SafeStylePipe,
     EventWheel
   ],

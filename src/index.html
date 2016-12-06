@@ -13,7 +13,22 @@
       dom: 'shadow'
     };
   </script>
+  <link rel="import" href="styles/layout-styles.html">
+  <link rel="import" href="assets/bower_components/iron-flex-layout/iron-flex-layout.html">
+  <link rel="import" href="assets/bower_components/paper-styles/color.html">
+  <link rel="import" href="assets/bower_components/paper-styles/default-theme.html">
+  <link rel="import" href="assets/bower_components/paper-styles/typography.html">
+  <link rel="import" href="assets/bower_components/paper-styles/shadow.html">
+  <style is="custom-style">
+    body {
+      @apply(--layout-fullbleed);
+      @apply(--paper-font-body1);
+      background: var(--primary-background-color);
+      color: var(--primary-text-color);
+    }
+  </style>
   <link rel="import" href="assets/bower_components/paper-drawer-panel/paper-drawer-panel.html">
+  <link rel="import" href="assets/bower_components/paper-input/paper-input.html">
 </head>
 <body>
 <app-root>Loading...</app-root>
