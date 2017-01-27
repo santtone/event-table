@@ -15,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#1.0.0"
+
   }
 }
