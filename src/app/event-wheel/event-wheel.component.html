@@ -1,14 +1,15 @@
-<div fxLayout="column" fxLayoutAlign="center center" >
-      <div class="wheel" [style.transform]="'rotate(' + wheelRotation + 'deg)'">
-        <div class='wheel-item' *ngFor="let month of months; let i = index"
-             [style.transform]="'rotate(' + (i*30-60) + 'deg)' + 'skew(-60deg)' | SafeStylePipe">
-          <div class='wheel-item-content' [style.transform]="'skew(60deg) ' + 'rotate(' + 113 + 'deg)' | SafeStylePipe"
-               (click)="selected(month.name)">
-            <div class="wheel-item-title">{{month.name}}</div>
-          </div>
-        </div>
+<div fxLayout="column" fxLayoutAlign="center center" class="wheel-container">
+  <div class="wheel" [style.transform]="'rotate(' + wheelRotation + 'deg)'">
+    <div class='wheel-item' *ngFor="let month of months; let i = index"
+         [style.transform]="'rotate(' + (i*30-60) + 'deg)' + 'skew(-60deg)' | SafeStylePipe">
+      <div class='wheel-item-content' [style.transform]="'skew(60deg) ' + 'rotate(' + 113 + 'deg)' | SafeStylePipe"
+           (click)="selected(month.name)">
+        <div class="wheel-item-title">{{month.name}}</div>
       </div>
-    <div class="wheel-center">
     </div>
+  </div>
+  <div class="wheel-center">
+  </div>
+  <ew-event-wheel-sector [radius]="230" [startAngle]="0" [endAngle]="340" [index]="1" class="wheel-sector"></ew-event-wheel-sector>
+  <ew-event-wheel-sector [radius]="280" [startAngle]="0" [endAngle]="180" [index]="2" class="wheel-sector"></ew-event-wheel-sector>
 </div>
-<!--<ew-event-wheel-sector></ew-event-wheel-sector>-->

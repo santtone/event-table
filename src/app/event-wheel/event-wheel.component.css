@@ -6,6 +6,7 @@
   min-height: 400px;
   border-radius: 50%;
   overflow: hidden;
+  z-index: 10;
 }
 
 .wheel-item {
@@ -51,7 +52,8 @@
   height: 200px;
   background: white;
   border-radius: 50%;
-  position: fixed;
+  position: absolute;
+  z-index: 11;
 }
 
 .wheel-center-pointer{
@@ -63,8 +65,10 @@
 }
 
 .wheel-container {
-  height: 100%;
-  width: 100%;
+  position: relative;
+}
+
+.wheel-sector{
   position: absolute;
 }
 

@@ -1,9 +1,14 @@
-<svg style="width: 100%; height: 100%">
-  <defs>
-    <path id="textPath" [attr.d]="pathD"/>
+<svg style="display: block; margin: auto; position: absolute"
+     [style.height]="sectorSize"
+     [style.z-index]="0"
+     [style.width]="sectorSize"
+     [style.marginLeft]="sectorSize / -2"
+     [style.marginTop]="sectorSize / -2">
+  <defs style="z-index: 0">
+    <path [id]="'path'+index" [attr.d]="pathD" style="z-index: 0"></path>
   </defs>
-  <use x="0" y="0" xlink:href="#textPath" fill="none" stroke="lightblue" stroke-width="40"/>
+  <use style="cursor: pointer" x="0" y="0" [attr.xlink:href]="'#path' + index" fill="none" stroke="lightblue" stroke-width="40" (click)="selected(index)"></use>
   <text fill="black" text-anchor="middle">
-    <textPath startOffset="50%" xlink:href="#textPath">Event...</textPath>
+    <textPath startOffset="50%" [attr.xlink:href]="'#path' + index">Event...</textPath>
   </text>
 </svg>
