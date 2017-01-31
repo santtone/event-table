@@ -12,6 +12,7 @@ export class EventWheel implements OnInit {
   element = null;
   center: number[];
   months: any[];
+  events: any[];
   wheelRotation = 0;
 
   constructor(el: ElementRef) {
@@ -30,6 +31,12 @@ export class EventWheel implements OnInit {
       {id: '11', name: 'November', color: 'rgba(0,0,0,0.95)'},
       {id: '12', name: 'December', color: 'rgba(0,0,0,1)'}
     ];
+
+    this.events = [
+      {name: 'First event', startAngle: 0, endAngle: 100},
+      {name: 'Second event', startAngle: 0, endAngle: 300},
+      {name: 'Third event', startAngle: 0, endAngle: 200}
+    ]
   }
 
   private calculateRotation(): void {

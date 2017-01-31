@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="center center" class="wheel-container">
+<div fxLayout="column" fxLayoutAlign="center center" class="wheel-container" style="margin-top: 150px">
   <div class="wheel" [style.transform]="'rotate(' + wheelRotation + 'deg)'">
     <div class='wheel-item' *ngFor="let month of months; let i = index"
          [style.transform]="'rotate(' + (i*30-60) + 'deg)' + 'skew(-60deg)' | SafeStylePipe">
@@ -10,6 +10,12 @@
   </div>
   <div class="wheel-center">
   </div>
-  <ew-event-wheel-sector [radius]="230" [startAngle]="0" [endAngle]="340" [index]="1" class="wheel-sector"></ew-event-wheel-sector>
-  <ew-event-wheel-sector [radius]="280" [startAngle]="0" [endAngle]="180" [index]="2" class="wheel-sector"></ew-event-wheel-sector>
+    <ew-event-wheel-sector
+      *ngFor="let event of events; let i = index"
+      class="wheel-sector"
+      [radius]="225 + (i * 40)"
+      [startAngle]="event.startAngle"
+      [endAngle]="event.endAngle"
+      [index]="i">
+    </ew-event-wheel-sector>
 </div>
