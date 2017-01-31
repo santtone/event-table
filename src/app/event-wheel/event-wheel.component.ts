@@ -42,8 +42,9 @@ export class EventWheel implements OnInit {
 
   private calculateRotation(): void {
     const d = new Date();
-    const days = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
-    this.wheelRotation = (d.getMonth() * 30 + 60) - (360 / days);
+    let daysInCurrentMonth = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
+    let monthInDegrees = 365 / 12;
+    this.wheelRotation = -(d.getMonth() * monthInDegrees + (d.getDate() / daysInCurrentMonth * monthInDegrees));
   }
 
   selected(index) {
