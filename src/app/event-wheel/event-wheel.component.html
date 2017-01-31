@@ -18,6 +18,7 @@
     <ew-event-wheel-sector
       *ngFor="let event of events; let i = index"
       class="wheel-sector"
+      [style.transform]="'rotate(' + wheelRotation + 'deg)'"
       [radius]="225 + (i * 40)"
       [startAngle]="event.startAngle"
       [endAngle]="event.endAngle"
