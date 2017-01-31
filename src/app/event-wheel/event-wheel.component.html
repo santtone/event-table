@@ -11,8 +11,10 @@
       </div>
     </div>
   </div>
-  <div class="wheel-center">
+  <div class="wheel-center" fxLayout="row" fxLayoutAlign="center center">
+    {{today | date:'dd.MM'}}
   </div>
+  <md-icon class="wheel-center-pointer">arrow_drop_up</md-icon>
     <ew-event-wheel-sector
       *ngFor="let event of events; let i = index"
       class="wheel-sector"

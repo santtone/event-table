@@ -14,6 +14,7 @@ export class EventWheel implements OnInit {
   months: any[];
   events: any[];
   wheelRotation = 0;
+  today = new Date();
 
   constructor(el: ElementRef) {
     this.element = el.nativeElement;
