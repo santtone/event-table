@@ -15,6 +15,7 @@ export class EventWheel implements OnInit {
   events: any[];
   wheelRotation = 0;
   today = new Date();
+  wheelSize;
 
   constructor(el: ElementRef) {
     this.element = el.nativeElement;
@@ -34,10 +35,12 @@ export class EventWheel implements OnInit {
     ];
 
     this.events = [
-      {name: 'First event', startAngle: 0, endAngle: 100},
+      {name: 'First event', startAngle: 0, endAngle: 340},
       {name: 'Second event', startAngle: 0, endAngle: 300},
-      {name: 'Third event', startAngle: 0, endAngle: 200}
-    ]
+      {name: 'Third event', startAngle: 0, endAngle: 320}
+    ];
+
+    this.wheelSize = 420 + this.events.length * 100;
   }
 
   private calculateRotation(): void {

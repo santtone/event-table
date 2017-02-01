@@ -1,7 +1,8 @@
-<div fxLayout="column" fxLayoutAlign="center center" class="wheel-container"
-     [style.margin-top]="(100 * events.length) + 'px'"
-     [style.margin-left]="(50 * events.length) + 'px'"
-     [style.margin-bottom]="(50 * events.length) + 'px'">
+<div fxLayout="row" fxLayoutAlign="center center" class="wheel-container"
+     [style.width]="wheelSize + 'px'"
+     [style.min-width]="wheelSize + 'px'"
+     [style.height]="wheelSize + 'px'"
+     [style.min-height]="wheelSize + 'px'">
   <div class="wheel" [style.transform]="'rotate(' + wheelRotation + 'deg)'">
     <div class='wheel-item' *ngFor="let month of months; let i = index"
          [style.transform]="'rotate(' + (i*30-60) + 'deg)' + 'skew(-60deg)' | SafeStylePipe">

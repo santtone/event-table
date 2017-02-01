@@ -44,7 +44,8 @@
   position: fixed;
   margin: 65px;
   width: 80px;
-  text-align: center
+  text-align: center;
+  font-size: 14px;
 }
 
 .wheel-center {
@@ -64,6 +65,7 @@
   margin-top: -105px;
   color: white;
   z-index: 10;
+  pointer-events: none;
 }
 
 .wheel-container {
