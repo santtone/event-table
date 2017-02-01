@@ -21,8 +21,8 @@
       class="wheel-sector"
       [style.transform]="'rotate(' + wheelRotation + 'deg)'"
       [radius]="225 + (i * 40)"
-      [startAngle]="event.startAngle"
-      [endAngle]="event.endAngle"
+      [startAngle]="event.startAt | DateToDegreesPipe"
+      [endAngle]="event.endAt | DateToDegreesPipe"
       [index]="i">
     </ew-event-wheel-sector>
 </div>

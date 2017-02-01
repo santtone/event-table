@@ -10,11 +10,13 @@ import {App} from './app.component';
 import {SafeStylePipe} from './safe-style.pipe'
 import {EventWheel} from './event-wheel/event-wheel.component'
 import {EventWheelSector} from './event-wheel/event-wheel-sector.component'
+import {DateToDegreesPipe} from "./utils/date-to-degrees";
 
 @NgModule({
   declarations: [
     App,
     SafeStylePipe,
+    DateToDegreesPipe,
     EventWheel,
     EventWheelSector
   ],

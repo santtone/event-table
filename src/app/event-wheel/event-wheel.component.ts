@@ -1,5 +1,5 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
-import {EventWheelSector} from "./event-wheel-sector.component";
+import {Event} from '../domain/event';
 
 @Component({
   selector: 'ew-event-wheel',
@@ -12,10 +12,10 @@ export class EventWheel implements OnInit {
   element = null;
   center: number[];
   months: any[];
-  events: any[];
   wheelRotation = 0;
   today = new Date();
   wheelSize;
+  events: Event[];
 
   constructor(el: ElementRef) {
     this.element = el.nativeElement;
@@ -35,9 +35,9 @@ export class EventWheel implements OnInit {
     ];
 
     this.events = [
-      {name: 'First event', startAngle: 0, endAngle: 340},
-      {name: 'Second event', startAngle: 0, endAngle: 300},
-      {name: 'Third event', startAngle: 0, endAngle: 320}
+      new Event('First event', new Date(2017, 0, 1), new Date(2017, 11, 20)),
+      new Event('Second event', new Date(2017, 1, 1), new Date(2017, 8, 15)),
+      new Event('Third event', new Date(2017, 6, 1), new Date(2017, 6, 30))
     ];
 
     this.wheelSize = 420 + this.events.length * 100;
