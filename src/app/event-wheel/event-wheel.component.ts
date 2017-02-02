@@ -40,7 +40,7 @@ export class EventWheel implements OnInit {
       new Event('Third event', new Date(2017, 6, 1), new Date(2017, 6, 30))
     ];
 
-    this.wheelSize = 420 + this.events.length * 100;
+    this.wheelSize = 400 + this.events.length * 100;
   }
 
   private calculateRotation(): void {
