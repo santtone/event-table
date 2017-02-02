@@ -1,4 +1,4 @@
-import {Component, AfterViewInit, NgModule} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +6,9 @@ import {Component, AfterViewInit, NgModule} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class App implements AfterViewInit {
-  ngAfterViewInit(): void {
+export class App {
+
+  addEvent(){
+    console.log('Add event');
   }
 }

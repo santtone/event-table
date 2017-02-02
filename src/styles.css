@@ -31,3 +31,6 @@ html, body{
   -webkit-font-smoothing: antialiased;
 }
 
+.icon-button-icon{
+  color: white;
+}

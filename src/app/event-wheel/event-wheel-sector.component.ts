@@ -41,7 +41,6 @@ export class EventWheelSector implements OnInit {
 
       this.sectorSize = 2 * (radius + 100);
       this.pathD = describeArc((radius + 100), (radius + 100), radius, start, end);
-      console.log((radius + 100) + ',' + (radius + 100) + ',' + radius + ',' + start + ',' + end)
     }
   }
 
