@@ -28,10 +28,11 @@
   height: 200%;
   border-radius: 50%;
   background: lightblue;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .wheel-item .wheel-item-content {
-  transform: skew(0deg); /* unskew slice contents */
+  transform: skew(0deg);
   cursor: pointer;
 }
 
@@ -78,6 +79,7 @@
   width: 0;
   height: 0;
   z-index: 11;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 
