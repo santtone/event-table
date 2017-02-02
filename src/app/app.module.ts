@@ -11,6 +11,7 @@ import {SafeStylePipe} from './safe-style.pipe'
 import {EventWheel} from './event-wheel/event-wheel.component'
 import {EventWheelSector} from './event-wheel/event-wheel-sector.component'
 import {DateToDegreesPipe} from "./utils/date-to-degrees";
+import {Draggable} from "./utils/draggable";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {DateToDegreesPipe} from "./utils/date-to-degrees";
     SafeStylePipe,
     DateToDegreesPipe,
     EventWheel,
-    EventWheelSector
+    EventWheelSector,
+    Draggable
   ],
   imports: [
     BrowserModule,
