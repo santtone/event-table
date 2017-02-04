@@ -12,6 +12,8 @@ import {EventWheel} from './event-wheel/event-wheel.component'
 import {EventWheelSector} from './event-wheel/event-wheel-sector.component'
 import {DateToDegreesPipe} from "./utils/date-to-degrees";
 import {Draggable} from "./utils/draggable";
+import {NewEventDialog} from "./event/new-event.component";
+import {DialogFactory} from "./utils/dialog-factory";
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import {Draggable} from "./utils/draggable";
     DateToDegreesPipe,
     EventWheel,
     EventWheelSector,
+    NewEventDialog,
     Draggable
   ],
   imports: [
@@ -29,7 +32,12 @@ import {Draggable} from "./utils/draggable";
     MaterialModule.forRoot(),
     FlexLayoutModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    DialogFactory
+  ],
+  entryComponents: [
+    NewEventDialog
+  ],
   schemas: [],
   bootstrap: [App]
 })

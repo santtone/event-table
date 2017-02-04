@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {DialogFactory} from "./utils/dialog-factory";
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,10 @@ import {Component} from '@angular/core';
 
 export class App {
 
+  constructor(private dialogFactory: DialogFactory){}
+
   addEvent(){
     console.log('Add event');
+    this.dialogFactory.newEventDialog();
   }
 }
