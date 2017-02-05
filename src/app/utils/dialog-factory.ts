@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {NewEventDialog} from "../event/new-event.component";
+import {NewEventDialog} from "../event/new-event-dialog";
 import {MdDialog} from "@angular/material";
 
 @Injectable()

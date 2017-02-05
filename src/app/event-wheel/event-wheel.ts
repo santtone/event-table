@@ -3,8 +3,8 @@ import {Event} from '../domain/event';
 
 @Component({
   selector: 'ew-event-wheel',
-  templateUrl: './event-wheel.component.html',
-  styleUrls: ['./event-wheel.component.css']
+  templateUrl: 'event-wheel.html',
+  styleUrls: ['event-wheel.css']
 })
 
 export class EventWheel implements OnInit {

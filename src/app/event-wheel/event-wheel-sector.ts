@@ -2,7 +2,7 @@ import {Component, OnInit, ElementRef, Input} from '@angular/core';
 
 @Component({
   selector: 'ew-event-wheel-sector',
-  templateUrl: './event-wheel-sector.component.html'
+  templateUrl: 'event-wheel-sector.html'
 })
 
 export class EventWheelSector implements OnInit {

@@ -6,13 +6,13 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 
-import {App} from './app.component';
+import {App} from './app';
 import {SafeStylePipe} from './safe-style.pipe'
-import {EventWheel} from './event-wheel/event-wheel.component'
-import {EventWheelSector} from './event-wheel/event-wheel-sector.component'
+import {EventWheel} from './event-wheel/event-wheel'
+import {EventWheelSector} from './event-wheel/event-wheel-sector'
 import {DateToDegreesPipe} from "./utils/date-to-degrees";
 import {Draggable} from "./utils/draggable";
-import {NewEventDialog} from "./event/new-event.component";
+import {NewEventDialog} from "./event/new-event-dialog";
 import {DialogFactory} from "./utils/dialog-factory";
 
 @NgModule({

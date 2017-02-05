@@ -3,7 +3,7 @@ import {MdDialogRef} from "@angular/material";
 
 @Component({
   selector: 'new-event-dialog',
-  templateUrl: './new-event.component.html',
+  templateUrl: 'new-event-dialog.html',
 })
 
 export class NewEventDialog {
