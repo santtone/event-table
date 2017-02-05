@@ -1,24 +1,24 @@
-<div fxLayout="row" fxLayoutAlign="center center" class="wheel-container"
+<div fxLayout="row" fxLayoutAlign="center center" class="ew-wheel-container"
      [style.width]="wheelSize + 'px'"
      [style.min-width]="wheelSize + 'px'"
      [style.height]="wheelSize + 'px'"
      [style.min-height]="wheelSize + 'px'">
-  <div class="wheel" [style.transform]="'rotate(' + wheelRotation + 'deg)'">
-    <div class='wheel-item' *ngFor="let month of months; let i = index"
+  <div class="ew-wheel" [style.transform]="'rotate(' + wheelRotation + 'deg)'">
+    <div class='ew-wheel-item' *ngFor="let month of months; let i = index"
          [style.transform]="'rotate(' + (i*30-60) + 'deg)' + 'skew(-60deg)' | SafeStylePipe">
-      <div class='wheel-item-content' [style.transform]="'skew(60deg) ' + 'rotate(' + 113 + 'deg)' | SafeStylePipe"
+      <div class='ew-wheel-item-content' [style.transform]="'skew(60deg) ' + 'rotate(' + 113 + 'deg)' | SafeStylePipe"
            (click)="selected(month.name)">
-        <div class="wheel-item-title">{{month.name}}</div>
+        <div class="ew-wheel-item-title">{{month.name}}</div>
       </div>
     </div>
   </div>
-  <div class="wheel-center" fxLayout="row" fxLayoutAlign="center center">
+  <div class="ew-wheel-center" fxLayout="row" fxLayoutAlign="center center">
     {{today | date:'dd.MM'}}
   </div>
-  <md-icon class="wheel-center-pointer">arrow_drop_up</md-icon>
+  <md-icon class="ew-wheel-center-pointer">arrow_drop_up</md-icon>
     <ew-event-wheel-sector
       *ngFor="let event of events; let i = index"
-      class="wheel-sector"
+      class="ew-wheel-sector"
       [style.transform]="'rotate(' + wheelRotation + 'deg)'"
       [radius]="225 + (i * 40)"
       [startAngle]="event.startAt | DateToDegreesPipe"
