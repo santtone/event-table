@@ -11,8 +11,9 @@ export class App {
 
   constructor(private dialogFactory: DialogFactory){}
 
-  addEvent(){
-    console.log('Add event');
-    this.dialogFactory.newEventDialog();
+  private addEvent(){
+    this.dialogFactory.newEventDialog().afterClosed().subscribe(result => {
+      console.log(result);
+    });
   }
 }

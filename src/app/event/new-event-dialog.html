@@ -3,13 +3,19 @@
 </div>
 <md-dialog-content>
   <md-input-container class="example-full-width">
-    <input md-input placeholder="Nimi">
+    <input md-input [ngModel]="name" placeholder="Name" (ngModelChange)="name = $event">
   </md-input-container>
   <br>
-  <input type="date">
+  <md-input-container class="example-full-width">
+    <input md-input placeholder="Start" type="date" [ngModel]="startDate" (ngModelChange)="startDate = $event">
+  </md-input-container>
+  <br>
+  <md-input-container class="example-full-width">
+    <input md-input placeholder="End" type="date" [ngModel]="endDate" (ngModelChange)="endDate = $event">
+  </md-input-container>
 </md-dialog-content>
 <md-dialog-actions>
-  <button md-button>Add</button>
-  <button md-button>Close</button>
+  <button md-button (click)="close()">Close</button>
+  <button md-button (click)="add()">Add</button>
 </md-dialog-actions>
 

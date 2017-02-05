@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {NewEventDialog} from "../event/new-event-dialog";
-import {MdDialog} from "@angular/material";
+import {MdDialog, MdDialogRef} from "@angular/material";
 
 @Injectable()
 export class DialogFactory {
@@ -8,10 +8,7 @@ export class DialogFactory {
   constructor(public dialog: MdDialog) {
   }
 
-  newEventDialog(): void {
-    let dialogRef = this.dialog.open(NewEventDialog);
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
-    });
+  public newEventDialog() {
+    return this.dialog.open(NewEventDialog);
   }
 }

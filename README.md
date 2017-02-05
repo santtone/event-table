@@ -25,3 +25,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ### Deploying to GitHub Pages
 
 Run `ng github-pages:deploy --base-href event-wheel` to deploy to GitHub Pages.
+
+### TODO
+
+- Pinch zoom wheel area
